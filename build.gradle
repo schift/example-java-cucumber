@@ -8,9 +8,11 @@ project.ext {
 dependencies {
     testCompile 'info.cukes:cucumber-java:' + cucumberVersion
     testCompile 'info.cukes:cucumber-junit:' + cucumberVersion
+    testCompile 'info.cukes:gherkin:2.12.2'
+
     testCompile 'junit:junit:' + junitVersion
-    compile 'com.epam.reportportal:agent-java-cucumber:3.0.0-BETA-1'
-    compile 'com.epam.reportportal:logger-java-logback:3.0.0'
+    compile 'com.epam.reportportal:agent-java-cucumber:3.0.0-BETA-2'
+//    compile 'com.epam.reportportal:logger-java-logback:3.0.0'
 
 }
 
