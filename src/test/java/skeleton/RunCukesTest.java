@@ -6,6 +6,6 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 //or @CucumberOptions(plugin = {"pretty", "com.epam.reportportal.cucumber.ScenarioReporter"})
-@CucumberOptions(plugin = {"com.epam.reportportal.cucumber.StepReporter"})
+@CucumberOptions(tags = "@ok", plugin = { "skeleton.RpListener" })
 public class RunCukesTest {
 }
