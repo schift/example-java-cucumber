@@ -9,8 +9,12 @@ dependencies {
     testCompile "info.cukes:cucumber-java:${cucumberVersion}"
     testCompile "info.cukes:cucumber-junit:${cucumberVersion}"
     testCompile 'info.cukes:gherkin:2.12.2'
+    testCompile 'ch.qos.logback:logback-classic:1.2.3'
+    testCompile 'com.epam.reportportal:logger-java-logback:3.0.0'
 
     testCompile "junit:junit:${junitVersion}"
+    compile 'com.github.reportportal:agent-java-cucumber:73bee44'
+    // compile 'com.epam.reportportal:logger-java-logback:3.0.0'
 //    compile 'com.github.reportportal:agent-java-cucumber:73bee44'
     compile 'com.epam.reportportal:agent-java-cucumber:4.0.2'
 //    compile 'com.epam.reportportal:logger-java-logback:3.0.0'
