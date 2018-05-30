@@ -11,7 +11,8 @@ dependencies {
     testCompile 'info.cukes:gherkin:2.12.2'
 
     testCompile "junit:junit:${junitVersion}"
-    compile 'com.github.reportportal:agent-java-cucumber:73bee44'
+//    compile 'com.github.reportportal:agent-java-cucumber:73bee44'
+    compile 'com.epam.reportportal:agent-java-cucumber:4.0.2'
 //    compile 'com.epam.reportportal:logger-java-logback:3.0.0'
 
 }
