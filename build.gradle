@@ -13,7 +13,7 @@ dependencies {
     testCompile 'com.epam.reportportal:logger-java-logback:4.0.0'
 
     testCompile "junit:junit:${junitVersion}"
-    compile 'com.epam.reportportal:agent-java-cucumber:4.0.2'
+    compile 'com.github.reportportal:agent-java-cucumber:d512c2a'
 
 }
 

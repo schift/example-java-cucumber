@@ -1,27 +1,31 @@
 package skeleton;
 
-import static org.junit.Assert.assertTrue;
-
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
+import java.util.List;
+
+import static org.hamcrest.CoreMatchers.equalTo;
+import static org.junit.Assert.assertThat;
+
 public class Stepdefs {
-	
-	private Belly belly = new Belly();
-	
-    @Given("^I have (\\d+) cukes in my belly$")
-    public void I_have_cukes_in_my_belly(int cukes) {
-        belly.eat(cukes);
-    }
-    
-    @When("^I wait (\\d+) hour$")
-    public void I_wait(int hours) {
-    	belly.wait(hours);
-    }
-    
-    @Then("^my belly should growl$")
-    public void my_belly_should_growl() {
-    	assertTrue(belly.growl());
-    }
+
+	SalaryManager manager;
+
+	@Given("^the salary management system is initialized with the following data$")
+	public void the_salary_management_system_is_initialized_with_the_following_data(final List<Employee> employees) throws Throwable {
+		manager = new SalaryManager(employees);
+	}
+
+	@When("^the boss increases the salary for the employee with id '(\\d+)' by (\\d+)%$")
+	public void the_boss_increases_the_salary_for_the_employee_with_id_by(final int id, final int increaseInPercent) throws Throwable {
+		manager.increaseSalary(id, increaseInPercent);
+	}
+
+	@Then("^the payroll for the employee with id '(\\d+)' should display a salary of (\\d+)$")
+	public void the_payroll_for_the_employee_with_id_should_display_a_salary_of(final int id, final float salary) throws Throwable {
+		Employee nominee = manager.getPayroll(id);
+		assertThat(nominee.getSalary(), equalTo(salary));
+	}
 }
