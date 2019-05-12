@@ -8,7 +8,7 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 //@CucumberOptions(plugin = {"pretty", "com.epam.reportportal.cucumber.ScenarioReporter"})
 //@CucumberOptions(tags = "@ok", plugin = { "skeleton.RpListener" })
-@CucumberOptions(plugin = {"rerun:target/rerun.txt" })
+@CucumberOptions(plugin = {"rerun:target/rerun.log" })
 public class RunCukesTest {
 
     public RunCukesTest() {

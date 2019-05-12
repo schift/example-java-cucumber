@@ -4,8 +4,8 @@ import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
 import org.junit.runner.RunWith;
 
-@RunWith(Cucumber.class)
+//@RunWith(Cucumber.class)
 
-@CucumberOptions(features = "@target/rerun.txt", plugin = {"rerun:target/rerun.txt"})
+@CucumberOptions(features = "@target/rerun.log", plugin = {"rerun:target/rerun.log"})
 
 public class FailedRunner {}
